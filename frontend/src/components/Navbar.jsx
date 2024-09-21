@@ -1,6 +1,7 @@
 import { Button, Container, Flex, HStack, Text, useColorMode } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
+import { TiShoppingCart } from "react-icons/ti";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
@@ -22,18 +23,18 @@ const Navbar = () => {
 				<Text
 					fontSize={{ base: "22", sm: "28" }}
 					fontWeight={"bold"}
-					textTransform={"uppercase"}
+					// textTransform={"uppercase"}
 					textAlign={"center"}
-					bgGradient={"linear(to-r, cyan.400, blue.500)"}
+					bgGradient='linear(to-l, #7928CA, #FF0080)'
 					bgClip={"text"}
 				>
-					<Link to={"/"}>Item Store 🛒</Link>
+					<Link to={"/"}>Items Store 🛒</Link>
 				</Text>
 
 				<HStack spacing={2} alignItems={"center"}>
-					<Link to={"/create"}>
-						<Button>
-							<PlusSquareIcon fontSize={20} />
+					<Link to={"/create"} >
+						<Button >
+							<PlusSquareIcon fontSize={20} bgGradient='linear(to-l, #7928CA, #FF0080)' />
 						</Button>
 					</Link>
 					<Button onClick={toggleColorMode}>
