@@ -1,10 +1,10 @@
 import { Button, Container, Flex, HStack, Text, useColorMode } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-
-import { TiShoppingCart } from "react-icons/ti";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
+import { FaStore } from "react-icons/fa6";
+
 
 const Navbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -25,19 +25,28 @@ const Navbar = () => {
 					fontWeight={"bold"}
 					// textTransform={"uppercase"}
 					textAlign={"center"}
-					bgGradient='linear(to-l, #7928CA, #FF0080)'
+					// bgGradient='linear(to-l, #7928CA, #FF0080)'
+					bgGradient='linear(to-r, red.500, yellow.500)'
 					bgClip={"text"}
 				>
-					<Link to={"/"}>Items Store 🛒</Link>
+					<HStack>
+						<FaStore size={25} color="orange"/>
+						<Link to={"/"}>Gadget Store</Link>
+					</HStack>
+
 				</Text>
 
 				<HStack spacing={2} alignItems={"center"}>
 					<Link to={"/create"} >
-						<Button >
-							<PlusSquareIcon fontSize={20} bgGradient='linear(to-l, #7928CA, #FF0080)' />
+						<Button _hover={{
+							bgGradient: 'linear(to-r, red.500, yellow.500)',
+						}}>
+							<PlusSquareIcon fontSize={20} />
 						</Button>
 					</Link>
-					<Button onClick={toggleColorMode}>
+					<Button _hover={{
+						bgGradient: 'linear(to-r, red.500, yellow.500)',
+					}} onClick={toggleColorMode}>
 						{colorMode === "light" ? <IoMoon /> : <LuSun size='20' />}
 					</Button>
 				</HStack>

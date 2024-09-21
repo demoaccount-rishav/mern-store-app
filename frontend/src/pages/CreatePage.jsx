@@ -71,8 +71,8 @@ const CreatePage = () => {
 						/>
 						<Input
 							_placeholder={{ color: 'gray.800', fontWeight: 600 }}
-							fontWeight={'500'}
 							letterSpacing={1.5}
+							fontWeight={'500'}
 							bgGradient='linear(to-l, #7928CA, #FF0080)'
 							placeholder='Image URL'
 							name='image'
